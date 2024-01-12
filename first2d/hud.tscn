@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://5wkl8iujrtfm"]
+[gd_scene load_steps=5 format=3 uid="uid://5wkl8iujrtfm"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_6ia7u"]
 [ext_resource type="FontFile" uid="uid://clkorkeing7bt" path="res://dodge_the_creeps_2d_assets/fonts/Xolonium-Regular.ttf" id="2_vhfy3"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_6objl"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_p1680"]
+events = [SubResource("InputEventAction_6objl")]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_6ia7u")
@@ -56,6 +62,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_vhfy3")
 theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_p1680")
 text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="."]
